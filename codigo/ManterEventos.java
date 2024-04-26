@@ -27,10 +27,14 @@ public class ManterEventos {
       saida.append(e).append("\n"); 
     }
     JOptionPane.showMessageDialog(null, output.toString());
-    
-    
-
   }
+
+  public void buscarEvento(Evento evento){
+    
+  }
+
+
+  
 //Método para atualizar puxando da classe bucarEventos
   public void atualizarEvento(int codEvento) {
     Evento evento = buscarEvento(codEvento);
@@ -46,8 +50,6 @@ public class ManterEventos {
     } else {
       JOptionPane.showMessageDialog(null, "Evento não encontrado!");
     }
-    
-    
 
   }
 

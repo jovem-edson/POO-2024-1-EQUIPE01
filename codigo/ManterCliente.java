@@ -19,6 +19,11 @@ public class ManterCliente {
   }
 
   public void listarClientes() {
+    StringBuilder saida = new StringBuilder("Clientes\n");
+    for(Evento e : eventos) {
+      saida.append(e).append("\n"); 
+    }
+    JOptionPane.showMessageDialog(null, output.toString());
 
   }
 
@@ -27,6 +32,7 @@ public class ManterCliente {
   }
 
   public void atualizarCliente(Cliente codCliente) {
+    
 
   }
 
