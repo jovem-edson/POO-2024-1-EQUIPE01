@@ -1,3 +1,5 @@
+package codigo;
+
 public class Promotor {
   private String nomePromotor, nomeEmpresa, cnpjEmpresa, contatoEmpresa;
 

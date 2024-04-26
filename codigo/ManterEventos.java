@@ -1,3 +1,5 @@
+package codigo;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -50,6 +52,15 @@ public class ManterEventos {
   }
 
   public void deletarEvento(int codEvento) {
+    Evento evento = buscarEvento(codEvento);
+    if(evento != null) {
+      eventos.remove(evento);
+      JOptionPane.showMessageDialog(null, "Evento deletado com sucesso!");
+    } else {
+      JOptionPane.showMessageDialog(null, "Evento não encontrado!");
+    }
+    
+    
 
   }
 }

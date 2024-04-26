@@ -1,3 +1,5 @@
+package codigo;
+
 public class ManterPromotor {
 
   public void cadastrarPromotor(Promotor promotor) {

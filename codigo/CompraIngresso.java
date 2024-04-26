@@ -1,3 +1,5 @@
+package codigo;
+
 public class CompraIngresso {
   public void solicitarLogin(String usuario, String senha) {
 

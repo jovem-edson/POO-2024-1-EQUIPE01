@@ -1,5 +1,11 @@
+package codigo;
+
 public class ManterCliente {
+  list<Cliente> clientes = new ArrayList<>();
+  
   public void cadastrarCliente(Cliente cliente) {
+    Cliente cliente = new Cliente();
+    cliente.setNomeCliente(JOptionPane.showInputDialog("Digite o nome do cliente: "));
 
   }
 

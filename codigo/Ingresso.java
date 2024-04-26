@@ -1,3 +1,5 @@
+package codigo;
+
 public class Ingresso {
   private int codIngresso;
 

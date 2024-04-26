@@ -1,4 +1,4 @@
-package xx;
+package codigo;
 
 public class Evento {
   private String nomeEvento, dataEvento, horaEvento, localEvento, tipoEvento;

@@ -1,3 +1,5 @@
+package codigo;
+
 public class Filtrar extends BuscaEventos {
   public void filtro(Evento nomeEvento, Evento localEvento, Evento dataEvento, Evento horarioEvento,
       Evento tipoEvento) {

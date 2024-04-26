@@ -1,3 +1,5 @@
+package codigo;
+
 public class Cliente {
   private String nome, cpf, email;
 
