@@ -29,7 +29,7 @@ public class ManterEventos {
     
 
   }
-
+//Método para atualizar puxando da classe bucarEventos
   public void atualizarEvento(int codEvento) {
     Evento evento = buscarEvento(codEvento);
     if(evento != null) {
