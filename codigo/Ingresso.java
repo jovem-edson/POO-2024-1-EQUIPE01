@@ -3,6 +3,8 @@ package codigo;
 public class Ingresso {
   private int codIngresso;
 
+  public Ingresso(){}
+  
   public Ingresso(int codIngresso) {
     this.codIngresso = codIngresso;
   }

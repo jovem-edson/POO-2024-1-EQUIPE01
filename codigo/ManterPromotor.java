@@ -2,7 +2,7 @@ package codigo;
 
 public class ManterPromotor {
 
-  public void cadastrarPromotor(Promotor promotor) {
+  public void cadastrarPromotor() {
 
   }
 
@@ -10,11 +10,13 @@ public class ManterPromotor {
 
   }
 
-  public void atualizarIngressos(int codIngresso) {
+  public void buscarPromotor(Promotor codPromotor){}
+
+  public void atualizarIngressos(Promotor codPromotor) {
 
   }
 
-  public void deletarIngressos(int codIngresso) {
+  public void deletarPromotor(Promotor codPromotor) {
 
   }
 }

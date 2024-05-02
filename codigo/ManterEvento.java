@@ -3,7 +3,7 @@ package codigo;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-public class ManterEventos {
+public class ManterEvento {
   list<Evento> eventos = new ArrayList<>();
   
   public void cadastrarEvento() {
