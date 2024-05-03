@@ -7,9 +7,8 @@ import java.util.List;
 
 public class PromotorDAO {
   Connection conecta;
-  PreparedStatement st;
-  conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/Senac", "root", "");
-  
+  PreparedStatement st;conecta=DriverManager.getConnection("jdbc:mysql://localhost:3306/Senac","root","");
+
   public void cadastrarPromotor() {
     Promotor promotor = new Promotor();
     promotor.setNomePromotor(JOptionPane.showInputDialog("Digite o nome do promotor: "));
@@ -35,18 +34,35 @@ public class PromotorDAO {
     }
   }
 }
-  
+
   public void listarIngressos() {
-  // for () {}
-  
+    // for () {}
+
   }
 
-  public void buscarPromotor(Promotor codPromotor){}
+  public void buscarPromotor(Promotor codPromotor) {
+  }
 
   public void atualizarIngressos(Promotor codPromotor) {
 
   }
 
   public void deletarPromotor(Promotor codPromotor) {
+    cn = conexao.openDB();
+    int codProm = Integer.parseInt(JOptionPane.showInputDialog("Digite o código do promotor que deseja deletar: "));
+    try {
+      int resp = JOptionPane.showConfirmDialog(null, "Deseja realmente deletar o promotor " + codProm);
+      if (resp == 0) {
+        st.executeUpdate("DELETE FROM promotores WHERE codPromotor = " + codProm);
+        cn.commit();
+      } else {
+        JOptionPane.showMessageDialog(null, "O promotor de código " + codProm + " não foi deletado.");
+      }
+    } catch (Exception e) {
+      String erro = e.getMessage();
+    } finally {
+      st.close();
+      cn.close();
+    }
   }
 }

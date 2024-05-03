@@ -1,7 +1,7 @@
 package DAO;
 
 import java.sql.*;
-
+import beans.Cliente;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;

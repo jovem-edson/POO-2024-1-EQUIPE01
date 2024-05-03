@@ -1,4 +1,4 @@
-package Beans;
+package beans;
 
 public class Cliente {
   private String nome, cpf, email;
