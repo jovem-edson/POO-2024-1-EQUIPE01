@@ -1,9 +1,9 @@
-package Model;
+package DAO;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-public class ManterEvento {
+public class EventoDAO {
   list<Evento> eventos = new ArrayList<>();
   
   public void cadastrarEvento() {

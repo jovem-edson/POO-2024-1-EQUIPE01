@@ -1,13 +1,19 @@
-package Model;
+package Beans;
 
 public class Promotor {
+  private int codPromotor;
   private String nomePromotor, nomeEmpresa, cnpjEmpresa, contatoEmpresa;
 
-  public Promotor(String nomePromotor, String nomeEmpresa, String cnpjEmpresa, String contatoEmpresa) {
+  public Promotor(int codPromotor, String nomePromotor, String nomeEmpresa, String cnpjEmpresa, String contatoEmpresa) {
+    this.codPromotor = codPromotor;
     this.nomePromotor = nomePromotor;
     this.nomeEmpresa = nomeEmpresa;
     this.cnpjEmpresa = cnpjEmpresa;
     this.contatoEmpresa = contatoEmpresa;
+  }
+  
+  public int getCodPromotor() {
+    return codPromotor;
   }
 
   public String getNomePromotor() {

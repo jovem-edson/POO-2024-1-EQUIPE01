@@ -1,4 +1,4 @@
-package Model;
+package Beans;
 
 public class Cliente {
   private String nome, cpf, email;
