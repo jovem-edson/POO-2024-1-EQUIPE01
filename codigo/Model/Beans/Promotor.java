@@ -1,4 +1,4 @@
-package codigo;
+package Model;
 
 public class Promotor {
   private String nomePromotor, nomeEmpresa, cnpjEmpresa, contatoEmpresa;

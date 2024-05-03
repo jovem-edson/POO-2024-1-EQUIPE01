@@ -1,4 +1,4 @@
-package codigo;
+package Model;
 
 public class ManterPromotor {
 
