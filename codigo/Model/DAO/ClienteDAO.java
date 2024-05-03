@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-public class ClienteDAO {
-
   Connection conecta;
   PreparedStatement st;
 
