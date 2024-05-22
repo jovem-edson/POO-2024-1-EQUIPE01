@@ -5,11 +5,12 @@ public class Album extends Midia {
     private int anoLancamento;
     private Artista artista;
     private Musica musica;
+    
 
     public Album() {
     }
 
-    public Album(int id, String nome, double preco, String classIndicativa, String genero, int qtdEstoque, String capa, int anoLancamento, Artista artista, Musica musica) {
+    public Album(int id, String nome, float preco, String classIndicativa, String genero, int qtdEstoque, String capa, int anoLancamento, Artista artista, Musica musica) {
         super(id, nome, preco, classIndicativa, genero, qtdEstoque);
         this.capa = capa;
         this.anoLancamento = anoLancamento;

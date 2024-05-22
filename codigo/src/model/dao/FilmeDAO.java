@@ -12,7 +12,7 @@ public class FilmeDAO {
 		try (Connection conecta = ConectaBD.conexao()) {
 			Filme filme = new Filme();
 			filme.setNome(JOptionPane.showInputDialog("Digite o nome do filme: "));
-			filme.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do filme: ")));
+			filme.setPreco(Float.parseFloat(JOptionPane.showInputDialog("Digite o preço do filme: ")));
 			filme.setClassIndicativa(JOptionPane.showInputDialog("Digite a classificação indicativa do filme: "));
 			filme.setGenero(JOptionPane.showInputDialog("Digite o gênero do filme: "));
 			filme.setQtdEstoque(
@@ -22,7 +22,7 @@ public class FilmeDAO {
 				st = conecta.prepareStatement(
 						"INSERT INTO filme (nome, preco, classIndicativa, genero, qtdEstoque) VALUES (?,?,?,?,?)");
 				st.setString(1, filme.getNome());
-				st.setDouble(2, filme.getPreco());
+				st.setFloat(2, filme.getPreco());
 				st.setString(3, filme.getClassIndicativa());
 				st.setString(4, filme.getGenero());
 				st.setInt(5, filme.getQtdEstoque());
@@ -51,7 +51,7 @@ public class FilmeDAO {
 				ResultSet rs = st.executeQuery();
 				while (rs.next()) {
 					dadosFilmes += "ID: " + rs.getInt("idFilme") + "\n" + "Nome: " + rs.getString("nome") + "\n"
-							+ "Preço: " + rs.getDouble("preco") + "\n" + "Classificação Indicativa: "
+							+ "Preço: " + rs.getFloat("preco") + "\n" + "Classificação Indicativa: "
 							+ rs.getString("classIndicativa") + "\n" + "Gênero: " + rs.getString("genero") + "\n"
 							+ "Quantidade em Estoque: " + rs.getInt("qtdEstoque") + "\n\n";
 				}
@@ -74,7 +74,7 @@ public class FilmeDAO {
 				ResultSet rs = st.executeQuery();
 				while (rs.next()) {
 					dadosFilmes += "ID: " + rs.getInt("idFilme") + "\n" + "Nome: " + rs.getString("nome") + "\n"
-							+ "Preço: " + rs.getDouble("preco") + "\n" + "Classificação Indicativa: "
+							+ "Preço: " + rs.getFloat("preco") + "\n" + "Classificação Indicativa: "
 							+ rs.getString("classIndicativa") + "\n" + "Gênero: " + rs.getString("genero") + "\n"
 							+ "Quantidade em Estoque: " + rs.getInt("qtdEstoque") + "\n\n";
 				}
@@ -92,7 +92,7 @@ public class FilmeDAO {
 		try (Connection conecta = ConectaBD.conexao()) {
 			Filme filme = new Filme();
 			filme.setNome(JOptionPane.showInputDialog("Digite o nome do filme: "));
-			filme.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do filme: ")));
+			filme.setPreco(Float.parseFloat(JOptionPane.showInputDialog("Digite o preço do filme: ")));
 			filme.setClassIndicativa(JOptionPane.showInputDialog("Digite a classificação indicativa do filme: "));
 			filme.setGenero(JOptionPane.showInputDialog("Digite o gênero do filme: "));
 			filme.setQtdEstoque(
@@ -101,7 +101,7 @@ public class FilmeDAO {
 				st = conecta.prepareStatement(
 						"UPDATE filme SET nome = ?, preco = ?, classIndicativa = ?, genero = ?, qtdEstoque = ? WHERE idFilme = ?");
 				st.setString(1, filme.getNome());
-				st.setDouble(2, filme.getPreco());
+				st.setFloat(2, filme.getPreco());
 				st.setString(3, filme.getClassIndicativa());
 				st.setString(4, filme.getGenero());
 				st.setInt(5, filme.getQtdEstoque());

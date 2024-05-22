@@ -5,20 +5,23 @@ import javax.swing.JOptionPane;
 
 public class Menu {
 	private JogoDAO jogo;
-	private MusicaDAO musica;
+	private AlbumDAO musica;
 
 
     public Menu() {
         this.jogo = new JogoDAO();
-        this.musica = new MusicaDAO();
+        this.musica = new AlbumDAO();
     }
 
     public void exibirMenu() {
-        String opcao;
+        String escolha[] = {"1","2","3","4","5","6","7","8","9","10", "0"};
+        Object opcao;
+     
+
         do {
-            opcao = JOptionPane.showInputDialog(
-                    "Escolha uma opção:\n" +
-                    "1 - Cadastrarkh Jogo\n" +
+           
+             opcao = JOptionPane.showInputDialog(null,"Escolha uma opção:\n" +
+                    "1 - Cadastrar Jogo\n" +
                     "2 - Listar Jogos\n" +
                     "3 - Consultar Jogo\n" +
                     "4 - Alterar Jogo\n" +
@@ -28,10 +31,11 @@ public class Menu {
                     "8 - Consultar Música\n" +
                     "9 - Alterar Música\n" +
                     "10 - Deletar Música\n" +
-                    "0 - Sair"
-            );
+                    "0 - Sair",
+               "Menu", JOptionPane.WARNING_MESSAGE, 
+               null, escolha, escolha[0]);
 
-            switch (opcao) {
+            switch (String.valueOf(opcao)) {
                 case "1":
                     jogo.cadastrarJogo();
                     break;
@@ -74,7 +78,7 @@ public class Menu {
                 default:
                     JOptionPane.showMessageDialog(null, "Opção inválida!");
             }
-        } while (!opcao.equals("0"));
+        } while (String.valueOf(opcao).equals("0"));
     }
 
     public static void main(String[] args) {

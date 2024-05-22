@@ -1,7 +1,6 @@
 package model.dao;
 
 import model.beans.Album;
-
 import model.beans.Artista;
 import model.beans.Musica;
 
@@ -30,7 +29,7 @@ public class AlbumDAO {
 			album.setAnoLancamento(Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de lançamento do álbum: ")));
 			
 			artista.setIdArtista(Integer.parseInt(JOptionPane.showInputDialog("Digite o ID do artista do álbum: ")));
-			artista.setNomeArtista(JOptionPane.showInputDialog("Digite o ID da música do álbum: "));
+			artista.setNome(JOptionPane.showInputDialog("Digite o ID da música do álbum: "));
 			
 			int qtdMusicas = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero de musicas no álbum: "));
 

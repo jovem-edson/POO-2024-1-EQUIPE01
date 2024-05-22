@@ -13,7 +13,7 @@ public class JogoDAO {
         try (Connection conecta = ConectaBD.conexao()) {
         Jogo jogo = new Jogo();
         jogo.setNome(JOptionPane.showInputDialog("Digite o nome do jogo: "));
-        jogo.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do jogo: ")));
+        jogo.setPreco(Float.parseFloat(JOptionPane.showInputDialog("Digite o preço do jogo: ")));
         jogo.setClassIndicativa(JOptionPane.showInputDialog("Digite a classificação indicativa do jogo: "));
         jogo.setGenero(JOptionPane.showInputDialog("Digite o gênero do jogo: "));
         jogo.setQtdEstoque(Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade em estoque do jogo: ")));
@@ -22,7 +22,7 @@ public class JogoDAO {
         try {
             st = conecta.prepareStatement("INSERT INTO jogo (nome, preco, classIndicativa, genero, qtdEstoque, isOnline) VALUES (?,?,?,?,?,?)");
             st.setString(1, jogo.getNome());
-            st.setDouble(2, jogo.getPreco());
+            st.setFloat(2, jogo.getPreco());
             st.setString(3, jogo.getClassIndicativa());
             st.setString(4, jogo.getGenero());
             st.setInt(5, jogo.getQtdEstoque());
@@ -54,7 +54,7 @@ public class JogoDAO {
             while (rs.next()) {
                 dadosJogos += "ID: " + rs.getInt("idJogo") + "\n" +
                         "Nome: " + rs.getString("nome") + "\n" +
-                        "Preço: " + rs.getDouble("preco") + "\n" +
+                        "Preço: " + rs.getFloat("preco") + "\n" +
                         "Classificação Indicativa: " + rs.getString("classIndicativa") + "\n" +
                         "Gênero: " + rs.getString("genero") + "\n" +
                         "Quantidade em Estoque: " + rs.getInt("qtdEstoque") + "\n" +
@@ -81,7 +81,7 @@ public class JogoDAO {
             while (rs.next()) {
                 dadosJogos += "ID: " + rs.getInt("idJogo") + "\n" +
                         "Nome: " + rs.getString("nome") + "\n" +
-                        "Preço: " + rs.getDouble("preco") + "\n" +
+                        "Preço: " + rs.getFloat("preco") + "\n" +
                         "Classificação Indicativa: " + rs.getString("classIndicativa") + "\n" +
                         "Gênero: " + rs.getString("genero") + "\n" +
                         "Quantidade em Estoque: " + rs.getInt("qtdEstoque") + "\n" +
@@ -101,7 +101,7 @@ public class JogoDAO {
         try (Connection conecta = ConectaBD.conexao()) {
         Jogo jogo = new Jogo();
         jogo.setNome(JOptionPane.showInputDialog("Digite o nome do jogo: "));
-        jogo.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Digite o preço do jogo: ")));
+        jogo.setPreco(Float.parseFloat(JOptionPane.showInputDialog("Digite o preço do jogo: ")));
         jogo.setClassIndicativa(JOptionPane.showInputDialog("Digite a classificação indicativa do jogo: "));
         jogo.setGenero(JOptionPane.showInputDialog("Digite o gênero do jogo: "));
         jogo.setQtdEstoque(Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade em estoque do jogo: ")));
@@ -109,7 +109,7 @@ public class JogoDAO {
         try {
             st = conecta.prepareStatement("UPDATE jogo SET nome = ?, preco = ?, classIndicativa = ?, genero = ?, qtdEstoque = ?, isOnline = ? WHERE idJogo = ?");
             st.setString(1, jogo.getNome());
-            st.setDouble(2, jogo.getPreco());
+            st.setFloat(2, jogo.getPreco());
             st.setString(3, jogo.getClassIndicativa());
             st.setString(4, jogo.getGenero());
             st.setInt(5, jogo.getQtdEstoque());

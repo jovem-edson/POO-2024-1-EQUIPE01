@@ -2,30 +2,30 @@ package model.beans;
 
 public class Artista {
 	private int idArtista;
-    private String nomeArtista;
+    private String nome;
 
     public Artista() {
     }
 
-    public Artista(int idArtista, String nomeArtista) {
+    public Artista(int idArtista, String nome) {
         this.idArtista = idArtista;
-        this.nomeArtista = nomeArtista;
+        this.nome = nome;
     }
 
     public int getIdArtista() {
         return idArtista;
     }
 
-    public String getNomeArtista() {
-        return nomeArtista;
+    public String getNome() {
+        return nome;
     }
 
     public void setIdArtista(int idArtista) {
         this.idArtista = idArtista;
     }
 
-    public void setNomeArtista(String nomeArtista) {
-        this.nomeArtista = nomeArtista;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 }

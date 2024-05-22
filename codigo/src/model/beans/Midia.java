@@ -4,7 +4,7 @@ public class Midia {
 		
 		private int idMidia;
 	    private String nome;
-	    private double preco;
+	    private float preco;
 	    private String classIndicativa;
 	    private String genero;
 	    private int qtdEstoque;
@@ -12,7 +12,7 @@ public class Midia {
 	    public Midia() {
 	    }
 
-	    public Midia(int idMidia, String nome, double preco, String classIndicativa, String genero, int qtdEstoque) {
+	    public Midia(int idMidia, String nome, float preco, String classIndicativa, String genero, int qtdEstoque) {
 	        this.idMidia = idMidia;
 	        this.nome = nome;
 	        this.preco = preco;
@@ -29,7 +29,7 @@ public class Midia {
 	        return nome;
 	    }
 
-	    public double getPreco() {
+	    public float getPreco() {
 	        return preco;
 	    }
 
@@ -53,7 +53,7 @@ public class Midia {
 	        this.nome = nome;
 	    }
 
-	    public void setPreco(double preco) {
+	    public void setPreco(float preco) {
 	        this.preco = preco;
 	    }
 
@@ -69,7 +69,7 @@ public class Midia {
 	        this.qtdEstoque = qtdEstoque;
 	    }
 
-	    public double calcularPrecoFinal() {
+	    public float calcularPrecoFinal() {
 	        return this.preco;
 	    }
 	}
